@@ -36,7 +36,7 @@ metasploit_development:
 metasploit_production:
   <<: *default
   database: msf4
-  username: <%= ENV['MSF_DATABASE_USERNAME'] %>msf
-  password: <%= ENV['MSF_DATABASE_PASSWORD'] %>hoverafl
-  host: <%= ENV['MSF_DATABASE_HOST'] %>localhost
-  port: <%= ENV['MSF_DATABASE_PORT'] %>5432
+  username: <%= ENV['MSF_DATABASE_USERNAME'] %>
+  password: <%= ENV['MSF_DATABASE_PASSWORD'] %>
+  host: <%= ENV['MSF_DATABASE_HOST'] %>
+  port: <%= ENV['MSF_DATABASE_PORT'] %>
