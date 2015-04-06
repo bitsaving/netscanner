@@ -1,0 +1,42 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+
+development:
+  <<: *default
+  database: netscanner_development
+  username: mzhukov
+  password:
+  host: localhost
+  port: 5432
+
+test:
+  <<: *default
+  database: netscanner_test
+
+production:
+  <<: *default
+  database: netscanner_production
+  username: <%= ENV['NETSCANNER_DATABASE_USERNAME'] %>
+  password: <%= ENV['NETSCANNER_DATABASE_PASSWORD'] %>
+  host: <%= ENV['NETSCANNER_DATABASE_HOST'] %>
+  port: <%= ENV['NETSCANNER_DATABASE_PORT'] %>
+
+metasploit_development:
+  <<: *default
+  database: msf
+  username: msf
+  password: hoverafl
+  host: localhost
+  port: 5432
+  pool: 5
+  timeout: 5
+
+metasploit_production:
+  <<: *default
+  database: msf4
+  username: <%= ENV['MSF_DATABASE_USERNAME'] %>msf
+  password: <%= ENV['MSF_DATABASE_PASSWORD'] %>hoverafl
+  host: <%= ENV['MSF_DATABASE_HOST'] %>localhost
+  port: <%= ENV['MSF_DATABASE_PORT'] %>5432
