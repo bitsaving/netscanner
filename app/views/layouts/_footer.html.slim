@@ -1,0 +1,12 @@
+footer
+  .container
+    ul.list-inline
+      li Created by <a href="https://github.com/crmaxx">Maxim Zhukov</a>
+      li
+        a href='https://github.com/crmaxx/netscanner' GitHub
+      li
+        a href='https://github.com/crmaxx/netscanner/issues' Issues
+      - if VersionManager.current_version
+        li
+          ' Version:
+          a href='https://github.com/crmaxx/netscanner/releases' = VersionManager.current_version

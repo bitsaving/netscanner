@@ -1,0 +1,24 @@
+.starter-template
+  h1 Hosts
+
+  p= link_to "Start check", "#"
+
+  table.table.table-condensed.table-hover.table-bordered#hosts cellpadding="0" cellspacing="0" border="0" data-source="#{hosts_url(format: 'json')}"
+    thead
+      tr
+        th #
+        th IP Address
+        th Host Name
+        th MAC-Address
+        th Response Time
+        th TCP Ports
+        th Logged Users
+        th LAN Group
+        th OS
+        th Remote Time
+        th User Accounts
+        th Windows Name
+        th Computer Model
+        th Brute Progress
+        th Status
+    tbody
