@@ -15,7 +15,6 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 
-
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -28,6 +27,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'msfrpc-client'
 gem 'will_paginate'
 gem 'bootstrap-will_paginate'
+gem 'jquery-datatables-rails'
 gem 'state_machine'
 
 group :development, :test do
@@ -42,4 +42,5 @@ group :development do
   gem 'awesome_print'
   gem 'quiet_assets'
   gem 'thin'
+  gem 'powify'
 end
