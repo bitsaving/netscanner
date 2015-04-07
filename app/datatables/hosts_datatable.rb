@@ -1,5 +1,5 @@
 class HostsDatatable
-  delegate :params, :h, :link_to, :link_to_logs, :link_to_error, to: :@view
+  delegate :params, :link_to, :link_to_logs, :link_to_error, to: :@view
 
   def initialize(view)
     @view = view
