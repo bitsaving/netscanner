@@ -1,7 +1,11 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
 @import "dataTables/bootstrap/3/jquery.dataTables.bootstrap";
 @import "dataTables/extras/dataTables.responsive";
+
+@import "bootstrap-modal-bs3patch";
+@import "bootstrap-modal";
 
 /* universal */
 

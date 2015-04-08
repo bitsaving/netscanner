@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  resources :hosts, only: :index
-
   root 'hosts#index'
+
+  resources :hosts, only: :index
+  resources :jobs, only: [:index, :show, :new, :create]
+  resources :credentials, only: :index
 end

@@ -1,0 +1,31 @@
+var title       = '.modal-title',
+    loader      = '.ajax-loader',
+    content     = '.modal-body-content',
+    dataRemote  = 'a[data-remote=true]',
+    toolbar     = 'div.modal-footer',
+    modal       = '#ajax-modal';
+
+//i set the title through a helper function
+$(title).html('New Job');
+
+//hides the modal and shows the ajax content
+$(loader).fadeToggle('fast', function() {
+  $(loader).fadeOut('slow');
+  $(content).html('<%= j render("credentials/grid") %>');
+  $('#credentials').dataTable({
+    sPaginationType: "full_numbers",
+    bServerSide: true,
+    sAjaxSource: $('#credentials').data('source'),
+    sDom: "<'row-fluid'<'span6'l><'span6'f>r>t<'row-fluid'<'span6'i><'span6'p>>",
+    sWrapper: "dataTables_wrapper form-inline"
+  });
+  $(modal).modal();
+});
+
+//brings the loader back up + gets rid of the content when linking to another controller method etc
+$(content).on('click', dataRemote, function(){
+  $(content).fadeOut('slow', function() {
+    $(content).empty();
+    $(loader).fadeIn('slow');
+  });
+});

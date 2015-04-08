@@ -1,0 +1,11 @@
+.starter-template
+  h1 Job
+
+  table.table.table-condensed.table-hover.table-bordered#jobs data-source="#{jobs_path(format: :json)}"
+    thead
+      tr
+        th #
+        th Name
+        th Description
+        th Status
+    tbody
