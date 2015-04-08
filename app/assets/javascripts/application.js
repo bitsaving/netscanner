@@ -17,6 +17,4 @@
 //= require dataTables/bootstrap/3/jquery.dataTables.bootstrap
 //= require bootstrap-modal
 //= require bootstrap-modalmanager
-// TODO fix dataTables with turbolinks
-// require turbolinks
 //= require_tree .

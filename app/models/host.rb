@@ -30,6 +30,8 @@ class Host < ActiveRecord::Base
 
   has_many :check_logs
 
+  before_validation :set_defaults
+
   validates :status, presence: true
 
   aasm column: :status do
@@ -60,5 +62,11 @@ class Host < ActiveRecord::Base
     query = "%#{query}%"
     ipaddress_match = arel_table[:ipaddress].matches(query)
     where(ipaddress_match)
+  end
+
+  private
+
+  def set_defaults
+    self.status ||= "new"
   end
 end
