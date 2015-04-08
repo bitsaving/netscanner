@@ -18,6 +18,7 @@ gem 'will_paginate'
 gem 'msfrpc-client'
 gem 'aasm'
 gem 'responders', '~> 2.0'
+gem 'rollbar', '~> 1.4.4'
 
 group :development, :test do
   gem 'pry-byebug'
@@ -34,5 +35,5 @@ group :development do
 end
 
 group :production do
-  gem 'puma'
+  gem 'unicorn'
 end
